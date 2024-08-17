@@ -1,0 +1,14 @@
+Un grupo de desarrolladores necesitan una base de datos para una
+aplicación de música, el cual tiene que tener bandas y músicos con
+sus álbumes, también se debe poder guardar que integrantes tiene
+la banda o el músico solista, desde cuando forma parte y si se fue,
+cuando se fue, de la banda o músicos se debe guardar solo su
+nombre y descripción. El usuario también tiene que poder dar me
+gusta a álbumes y canciones, en el caso de darle me gusta a un
+álbum, automáticamente le da me gusta a todas las canciones del
+álbum, también cada álbum se le puede clasificar por géneros de
+música. También se debe poder guardar que instrumentos toco el
+músico en los momentos que estuvo tocando con sus bandas o
+músicos solistas. El usuario tiene también con las canciones, poder
+armarse sus playlists y se debe guardar el historial de escuchas que
+tiene el usuario.

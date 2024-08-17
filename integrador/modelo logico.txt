@@ -1,0 +1,69 @@
+INSTRUMENTO(nombre)
+  PK(nombre)
+ARTISTA(id_art, nombre, descripcion, tipo)
+  PK(id_art)
+INTEGRANTE(proyecto, musico, fecha_fin null, fecha_inicio)
+  PK(proyecto, musico, fecha_inicio)
+  FK(proyecto, ARTISTA)
+  FK(musico, ARTISTA)
+QUETOCA(nombre, proyecto, musico, fecha_inicio)
+  PK(nombre, proyecto, musico, fecha_inicio)
+  FK(nombre, INSTRUMENTO)
+  FK(musico, proyecto, fecha_inicio, INTEGRANTE)
+SABETOCAR(nombre, id_art)
+  PK(nombre, id_art)
+  FK(nombre, INSTRUMENTO)
+  FK(id_art, ARTISTA)
+GENERO(nombre) 
+  PK(nombre)
+ALBUM(id_alb, nombre, fecha_lanzamiento, duracion, id_art)
+  PK(id_alb)
+  FK(id_art, ARTISTA)
+TIPO(id_alb, nombre)
+  PK(id_alb, nombre)
+  FK(nombre, GENERO)
+  FK(id_alb, ALBUM)
+CANCION(id_can, nombre, duracion, id_alb)
+  PK(id_can)
+  FK(id_alb, ALBUM)
+USUARIO(id_us, nombre, apellido, email)
+  PK(id_us)
+GUSTA(id_us, id_can)
+  PK(id_us, id_can)
+  FK(id_us, USUARIO)
+  FK(id_can, CANCION)
+ESCUCHA(id_us, id_can, fecha_hora)
+  PK(id_us, id_can, fecha_hora)
+  FK(id_us, USUARIO)
+  FK(id_can, CANCION)
+PLAYLIST(nombre, duracion, id_us)
+  PK(nombre, id_us)
+  FK(id_us, USUARIO)
+CONTIENE(id_us, nombre, id_can)
+  PK(id_us, nombre, id_can)
+  FK(id_ can, CANCION)
+  FK(id_us, nombre, PLAYLIST)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
